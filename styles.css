@@ -1,0 +1,93 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right, #222, #444); /* Hintergrundfarbverlauf von Dunkelgrau zu Grau */
+    overflow-y: scroll; /* Erlaubt das Scrollen für den Fall, dass die Inhalte die Bildschirmgröße überschreiten */
+}
+
+/* Webkit-basierte Browser (Chrome, Safari) */
+body::-webkit-scrollbar {
+    width: 8px; /* Dicke der Scrollleiste festlegen (Chrome, Safari) */
+}
+
+/* Hintergrund der Scrollleiste */
+body::-webkit-scrollbar-track {
+    background-color: #222;
+    margin-top: -4px; /* Verkürzen der Scrollbar oben */
+    margin-bottom: -4px; /* Verkürzen der Scrollbar unten */
+}
+
+/* Vordergrund der Scrollleiste (der "fortschreitende Balken") */
+body::-webkit-scrollbar-thumb {
+    background-color: #666;
+    border-radius: 10px; /* Runde Ecken für den Fortschrittsbalken */
+}
+
+/* Äußere Umrandung der Scrollleiste (falls gewünscht) */
+body::-webkit-scrollbar-thumb:hover {
+    background-color: #888;
+}
+
+.fixed-buttons {
+    position: fixed;
+    left: -10px; /* Anpassung des Abstands vom linken Rand */
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: transparent; /* Hintergrund der Buttons transparent machen */
+    padding: 10px;
+    border-radius: 0 5px 5px 0;
+}
+
+.fixed-buttons button {
+    display: block;
+    width: 27px; /* 10% kleiner */
+    height: 27px; /* 10% kleiner */
+    margin: 5px;
+    padding: 0; /* Kein zusätzlicher Innenabstand */
+    border: none;
+    background-color: transparent; /* Hintergrund der Buttons transparent machen */
+    color: #333;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    position: relative;
+    border-radius: 50%; /* Kreisförmige Form */
+    overflow: hidden; /* Überlauf verbergen, um die Kreisform zu erhalten */
+}
+
+.fixed-buttons .dot {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.7); /* Farbe des Punkts */
+    border-radius: 50%; /* Kreisförmige Form für den Punkt */
+    display: block;
+    transform: scale(0.55); /* 45% kleiner für die obere Schicht */
+}
+
+.fixed-buttons button:hover {
+    background-color: rgba(255, 255, 255, 0.3); /* Hintergrundfarbe auf leicht transparent ändern */
+    color: black; /* Textfarbe ändern, um den Kontrast zu erhöhen */
+}
+
+.fixed-buttons button.active {
+    background-color: rgba(255, 255, 255, 0.3); /* Hintergrundfarbe für den aktiven Button */
+    color: black; /* Textfarbe ändern, um den Kontrast zu erhöhen */
+    transition: none; /* Keine Übergänge für die Aktivierung */
+}
+
+.line {
+    width: 1px; /* Breite des Strichs auf 1px ändern */
+    height: 100vh;
+    background-color: lightgray; /* Hellgraue Farbe für den Strich */
+    position: fixed;
+    left: 39px; /* Abstand vom linken Rand der Seite */
+    top: 0;
+}
+
+.section {
+    height: 100vh;
+    color: white;
+    font-size: 24px;
+    text-align: center;
+    padding-top: 50px;
+}
