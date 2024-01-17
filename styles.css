@@ -3,27 +3,28 @@ body {
     font-family: Arial, sans-serif;
     background: linear-gradient(to right, #222, #444); /* Hintergrundfarbverlauf von Dunkelgrau zu Grau */
     overflow-y: scroll; /* Erlaubt das Scrollen für den Fall, dass die Inhalte die Bildschirmgröße überschreiten */
+    overflow-x: hidden; /* Deaktiviert die horizontale Scrollbar */
 }
 
 /* Webkit-basierte Browser (Chrome, Safari) */
 body::-webkit-scrollbar {
-    width: 8px; /* Dicke der Scrollleiste festlegen (Chrome, Safari) */
+    width: 8px; /* Dicke der vertikalen Scrollleiste festlegen (Chrome, Safari) */
 }
 
-/* Hintergrund der Scrollleiste */
+/* Hintergrund der vertikalen Scrollleiste */
 body::-webkit-scrollbar-track {
     background-color: #222;
-    margin-top: -4px; /* Verkürzen der Scrollbar oben */
-    margin-bottom: -4px; /* Verkürzen der Scrollbar unten */
+    margin-top: -4px; /* Verkürzen der vertikalen Scrollbar oben */
+    margin-bottom: -4px; /* Verkürzen der vertikalen Scrollbar unten */
 }
 
-/* Vordergrund der Scrollleiste (der "fortschreitende Balken") */
+/* Vordergrund der vertikalen Scrollleiste (der "fortschreitende Balken") */
 body::-webkit-scrollbar-thumb {
     background-color: #666;
     border-radius: 10px; /* Runde Ecken für den Fortschrittsbalken */
 }
 
-/* Äußere Umrandung der Scrollleiste (falls gewünscht) */
+/* Äußere Umrandung der vertikalen Scrollleiste (falls gewünscht) */
 body::-webkit-scrollbar-thumb:hover {
     background-color: #888;
 }
